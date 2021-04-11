@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Titillium+Web&display=swap');
+
+h1 {
+    font-family: 'Nosifer', 'cursive';
+    color: white;
+    line-height: 50%;
+}
+
+h2 {
+    line-height: 80%;
+    margin-top: -15px;
+}
+
+body {
+    text-align: center;
+    background-color: #171717;
+    color:white;
+    font-family: 'Titillium Web', sans-serif;
+    font-size:12pt;
+}
+
+.directionBackground {
+    background: url(images/direction.jpg);
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.hunt {
+    background-color: #1f0101;
+}
+
+.dead {
+    color: red;
+    animation-name: huntAnimation;
+    animation-fill-mode: backwards;
+    animation-delay: 3s;
+    animation-duration: 4s;
+}
+
+#blood {
+    animation-name: bloodAnimation;
+    animation-fill-mode: backwards;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    background-image: url(images/blood.png);
+    background-size: contain;
+    width: 99%;
+    position: absolute;
+    height: 1000px;
+    margin:auto;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.deathBackground {
+    background-color: black;
+    animation-name: huntAnimation;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+.surviveBackground {
+    background-color: black;
+    animation-name: huntAnimation;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+.dropbutton {
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+    background-color: gray;
+    border: 15px;
+    width: 90px;
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    right: 40%;
+    margin-top: 0.5rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgray;
+    min-width: 500px;
+    box-shadow: 0 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+
+.dropdown:hover .dropbtn {
+    background-color: gray;
+}
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.map {
+    position:absolute;
+    float: right;
+    margin-left: 25%;
+    margin-top: 3rem; 
+    width: 15%;
+}
+
+.photo {
+    width: 60%;
+    box-shadow: 0 8px 16px 0px rgba(1,1,1,1);
+    color: black;
+    background-position: relative;
+}
+
+
+.bottomText {
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 50rem;
+}
+
+.extraMargin {
+    margin-right: 30px;
+}
+
+.buttons {
+    margin: 30px;
+    padding: 20px;
+    margin-top: 20px; 
+    text-align: center;
+    min-width: auto;
+    float:inherit;
+}
+
+a {
+    background-color: darkgray;
+    box-shadow: 0 8px 16px 0px rgba(0,0,0,1);
+    z-index: 1;
+    outline: 2px;
+    outline-color: black;
+    color: black;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+}
+
+.goBack {
+    background-color: darkolivegreen;
+}
+
+a:hover {
+    background-color: darkred;
+}
+
+
+
+
+@keyframes screenShake {
+  0%  { transform: translate(0%, 0%)}
+  25%  { transform: translate(-50px, 0%)}
+  50%  { transform: translate(50px, 30px)}
+  75% { transform: translate(-70px, -50px)}
+  100% { transform: translate(0%, 0%)}
+}
+
+@keyframes buttonShakeAnimation {
+  0%  { transform: translate(0%, 0%)}
+  33%  { transform: translate(0px, -15px)}
+  66%  { transform: translate(0px, 15px)}
+  100% { transform: translate(0%, 0%)}
+}
+
+@keyframes huntAnimation {
+    0% { opacity: 0%}
+    100% { opacity: 100%}
+}
+
+@keyframes bloodAnimation {
+    0% { opacity: 0%; transform: translate(0px, -300px)}
+    100% {opacity: 100%; transform: translate(0px, 0px)}
+}
+
+
+
+
+/* The element to apply the animation to */
+
+
+/*image shake */
+.shake {
+ 
+  animation-name: screenShake;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+/* map shake */
+.secondShake {
+ 
+  animation-name: screenShake;
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;
+}
+
+/* guides/notes Shake */
+.thirdShake {
+ 
+  animation-name: screenShake;
+    animation-delay: 0.4s;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+/*button Shake */
+.buttonShake {
+    animation-name: buttonShakeAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.smallShake {
+    animation-name: screenShake;
+    animation-duration: 0.5s;
+    animation-iteration-count: 2;
+}
